@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylessheet" type="text/css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Instagram Bootstrap</title>
+</head>
+<body>
+      <div class="contenedor">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="d-inline-block align-text-top">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span class="navbar-brand mb-0 fs-6 fw-medium">Instagram</span>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#new-post-modal">Create a new post</button>
+                    <div class="dropdown ms-2">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="modal fade" id="new-post-modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="modalLabel">Create a new post</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <label for="description" class="form-label">Caption:</label>
+                        <div class="input-group">
+                            <textarea class="form-control" id="description" placeholder="Add the caption of your post here"></textarea>
+                        </div>
+
+                        <div class="d-flex justify-content-start mt-3">
+                            <button type="button" class="btn btn-light btn-sm me-2 border"><i class="fa-solid fa-camera"></i></button>
+                            <button type="button" class="btn btn-light btn-sm border"><i class="fa-solid fa-location-dot"></i></button>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="nav justify-content-center my-3" role="tablist">
+            <li class="nav-item" role="presentation">
+                <input id="btnradio1" type="radio" class="btn-check active" name="btnradio" data-bs-toggle="pill" data-bs-target="#pics-grid" 
+                role="tab" aria-controls="pics-grid" autocomplete="off" aria-selected="true">
+                <label class="btn btn-outline-primary text-secondary border border-0" for="btnradio1"><i class="fa-solid fa-table-cells"></i></label>
+            </li>
+            <li class="nav-item" role="presentation">
+                <input id="btnradio2" type="radio" class="btn-check" name="btnradio" data-bs-toggle="pill" data-bs-target="#pics-vertical" 
+                role="tab" aria-controls="pics-vertical" autocomplete="off" aria-selected="false">
+                <label class="btn btn-outline-primary text-secondary border border-0" for="btnradio2"><i class="fa-solid fa-square"></i></label>
+            </li>
+        </ul>
+       <div class="container tab-content">
+            <div class="tab-pane fade active show" id="pics-grid" role="tabpanel" aria-labelledby="btnradio1" tabindex="0">
+                <div class="row mb-4">
+                    <div class="col-4">
+                        <img src="imagenes/1.1.jpg" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="imagenes/1.2.png" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="imagenes/1.3.jpg" alt="picture" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-4">
+                        <img src="imagenes/1.4.jpg" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="imagenes/1.5.jpg" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="imagenes/1.6.png" alt="picture" class="img-fluid">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-4">
+                        <img src="imagenes/1.7.jpg" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="imagenes/1.8.jpg" alt="picture" class="img-fluid">
+                    </div>
+                    <div class="col-4">
+                        <img src="imagenes/1.9.jpg" alt="picture" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container tab-content">
+            <div class="row tab-pane fade d-flex justify-content-center" id="pics-vertical" role="tabpanel" aria-labelledby="btnradio2" tabindex="0">
+                <div class="col-7 d-flex flex-column row-gap-3">
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>miau</h6>
+                            <p><3</p>
+                        </div>
+                        <img src="imagenes/1.1.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>like a cat</strong></h6>
+                            <p class="card-text">fotito.</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>rabbit</h6>
+                            <p><3</p>
+                        </div>
+                        <img src="imagenes/1.2.png" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>goodbye</strong></h6>
+                            <p class="card-text">my lover</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>spot</h6>
+                            <p>babunny</p>
+                        </div>
+                        <img src="imagenes/1.3.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>:)</strong></h6>
+                            <p class="card-text">eso</p>
+                        </div>
+                    </div>   
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>?</h6>
+                            <p>01/01</p>
+                        </div>
+                        <img src="imagenes/1.4.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>0 likes</strong></h6>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tempore eaque, doloribus possimus sed dolorem nulla officia aliquam, quisquam qui ipsam neque a non exercitationem. Dolorum expedita quod at earum..</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>homie?</h6>
+                            <p>animal</p>
+                        </div>
+                        <img src="imagenes/1.5.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>o./like</strong></h6>
+                            <p class="card-text">Example text picture description.</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>lego</h6>
+                            <p>damn</p>
+                        </div>
+                        <img src="imagenes/1.6.png" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>:)</strong></h6>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, nam. Architecto ratione magni nemo nulla minus ut impedit, veritatis totam et, voluptate amet vero quia a quod recusandae deserunt at..</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>go</h6>
+                            <p>:E</p>
+                        </div>
+                        <img src="imagenes/1.7.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>201 me gusta</strong></h6>
+                            <p class="card-text">breeee.</p>
+                        </div>
+                    </div> 
+                    <div class="card border-secondary-subtle">
+                        <div class="card-header bg-transparent d-flex justify-content-between px-2 pt-3 pb-0">
+                            <h6 class=card-title>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nemo natus necessitatibus vero vel quia, perferendis ratione fuga voluptas iste porro quibusdam ipsum provident, dolore eos aperiam autem neque assumenda.</h6>
+                            <p>jerejejre</p>
+                        </div>
+                        <img src="imagenes/1.8.jpg" alt="picture" class="card-img-fluid">
+                        <div class="card-body px-2">
+                            <h6 class="card-title"><strong>rap</strong></h6>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, cupiditate! Hic sint eaque iure aliquid quis assumenda at omnis, provident nihil officiis commodi! Optio sapiente ipsam saepe a quos debitis.</p>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js" integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D" crossorigin="anonymous"></script>
+</body>
+</html>
